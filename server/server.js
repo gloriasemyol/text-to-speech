@@ -5,6 +5,8 @@ const path = require('path')
 const ttsRoutes = require('./routes/ttsRoutes')
 
 const app = express()
+app.set('trust proxy', 1)
+
 const PORT = process.env.PORT || 5000
 
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }))
